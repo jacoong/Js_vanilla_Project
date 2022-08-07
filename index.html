@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sytle.css" />
+    <title>Momentum</title>
+</head>
+<body>
+    <form id="sendRequest">
+        <input 
+            required
+            type="text" 
+            maxlength="15"
+            placeholder="what is your name?"
+            />
+        <input type="submit" value="Log In"/>
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo_form">
+        <input id="todo_input" type="text" placeholder="To Do List">
+    </form>
+    <ul id="todo_List">
+    </ul>
+
+    <h2 id = "clock"></h2>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <script src="app.js"></script>
+    <script src="clock.js"></script>
+    <script src="quote.js"></script>
+    <script src="background.js"></script>
+    <script src="todo1.js"></script>
+
+    <!-- <script src="weather.js"></script> -->
+
+</body>
+</html>
