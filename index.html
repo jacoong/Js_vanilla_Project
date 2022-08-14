@@ -4,43 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sytle.css" />
-    <title>Momentum</title>
+    <title>momentum</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
+
+    <nav>
+        <div id="navR">
+
+        </div>
+    </nav>
 <body>
-    <form id="sendRequest">
-        <input 
-            required
-            type="text" 
-            maxlength="15"
-            placeholder="what is your name?"
-            />
-        <input type="submit" value="Log In"/>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo_form">
-        <input id="todo_input" type="text" placeholder="To Do List">
-    </form>
-    <ul id="todo_List">
-    </ul>
 
-    <h2 id = "clock"></h2>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
+    <div id="wrapper">
+            <div id ="weather" class="hidden">
+                <span></span>
+                <div id="weatherbottom">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="weather_Description" class="hidden">
+            
+                </div>
+            </div>
+            
+            <header>
+                <button id="log_outt" class="hidden">Change Name</button>
+                <div id="clock" class="hidden">
+                </div>
 
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
-    <script src="app.js"></script>
-    <script src="clock.js"></script>
-    <script src="quote.js"></script>
-    <script src="background.js"></script>
-    <script src="todo1.js"></script>
 
-    <!-- <script src="weather.js"></script> -->
+            </header>   
+            <main>
+                
+                <div class="main_form">
+                    <form id="form_element">
+                        <div id="welcomeBanner">Welcome!</br>What is your name?</div>
+                        <input  id="form_element_input"
+                                required
+                                type="text" 
+                                maxlength="15"
+                                autocomplete="off"
+                                placeholder="Put your Name"
+                >
+
+                        <button id="loginBt">log-in</button>
+                    </form>
+                    <h1 id="greetingg" class="hidden"></h1>
+            
+
+
+                    <form id="to_Do_Form" class="hidden">
+                        <input id="to_Do_input"
+                            type ="text";
+                            autocomplete='off'
+                            placeholder="To Do List"
+                            required>
+                    </form>
+                </div>
+            </main>
+                    <div class="todo_area">
+                        <ul id = todo_list class="hidden"></ul>
+                    </div>  
+
+        <div id="footerArea" class="hidden">
+
+            <div id="quotes" class="center">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="right">
+            </div>
+        </div> 
+    </div>  
+
+
+    <script src="Script/app.js"></script>
+    <script src="Script/clock.js"></script>
+    <script src="Script/quote.js"></script>
+    <script src="Script/background.js"></script>
+    <script src="Script/todo.js"></script>
+    <script src="Script/weather.js"></script>
 
 </body>
 </html>

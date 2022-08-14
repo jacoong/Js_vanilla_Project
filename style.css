@@ -1,0 +1,437 @@
+*{
+    color:white;
+    margin:0;
+    padding:0;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    
+
+}
+
+@keyframes firstroad {
+    0% {
+        transform: scale( 1.0 );
+    }
+    30%{
+        transform: scale( 1.3 );
+        opacity: 1;
+    }
+    70% {
+        transform: scale( 0.9 );
+        opacity: 0.2;
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+
+@keyframes secondroad {
+
+    0% {
+        transform: scale( 0.7 );
+        opacity: 0.2;
+    }
+    100%{
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes big {
+
+    0% {
+        transform: scale( 1 );
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+@keyframes weatherdes {
+
+    0% {
+        transform: scale( 0.5 );
+        opacity: 0.3;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+
+
+
+body{
+    height: 100vh;
+    width: 100%;  
+    background-repeat: no-repeat;
+    font-family: 'poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#welcomeBanner {
+    height: 20vh;
+    top:1px;
+    display: block;
+    font-size: 4rem;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 400;
+    animation: firstroad 2s ease-in-out;
+}
+
+#welcomeBanner:hover {
+    font-size: 5.5rem;
+}
+
+div #log_outt {
+    font-size: 20px;
+    text-align: center;
+    animation: secondroad 1s ease-in-out;
+    position: absolute;
+    top: 7%;
+    left: 3%;
+    width: 140px;
+    height: 50px;
+    border:3px solid white;
+    border-radius: 10px;
+    opacity:0.8;
+}
+
+div #log_outt:hover {
+    width: 170px;
+    height: 70px;
+    font-size: 25px;
+}
+
+
+nav audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 200px;
+    height: 30px;
+
+}
+
+
+#clock{
+    font-size: 10rem;
+    opacity: 0.4;
+    animation: secondroad 1s ease-in-out;
+    
+    
+    
+}
+
+#clock:hover{
+    opacity: 1;
+    font-size: 11rem;
+}
+
+div #weather{
+    font-size: 20px;
+    text-align: right;
+    animation: secondroad 0.5s ease-in-out;
+    position: absolute;
+    top: 5%;
+    right: 4%;
+}
+
+div #weather:hover{
+    font-size: 30px;
+}
+#weather img{
+    width:50px;
+    height:50px;
+}
+
+#weatherbottom span{
+    font-size: 33px;
+}
+
+
+div #weather_Description{
+    animation: weatherdes 0.4s ease-in-out;
+    font-size: 25px;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    top: 131%;
+    right: -2%;
+    width: 300px;
+    height: 200px;
+    text-align: left;
+    background-color: black;
+    
+
+}
+@keyframes fat{
+    from  { 
+        width: 120px; 
+    }
+    to{ 
+        width: 300px; 
+    }
+  }
+@keyframes logfat{
+    from  { 
+        background-color: white;
+        color: black; 
+        opacity: 0.4;
+    }
+    to{ 
+        background-color: white;
+        color: black; 
+    }
+  }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+
+}
+
+input[type=text] {
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    opacity: 0.4;
+    padding-left: 20px;
+    
+}
+
+    
+    input[type=text]:hover {
+        opacity: 1;
+        width:400px;
+        height: 50px;
+
+    }
+
+    input[type=text]:focus {
+        outline: none;
+        opacity: 1;
+        width:400px;
+        height: 50px;
+    }
+
+    input[type=text]::placeholder {
+        color: white;
+    }
+
+button {
+    display: inline;
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    font-size: 18px;
+    border:none;
+    opacity: 0.5;
+    font-weight: 400;
+
+}
+
+    button:hover {
+        animation: 0.02s easy ease-in-out;
+        height: 43px;
+        color:white; 
+        opacity: 0.8;
+        width: 130px;
+
+    }
+.todo_area ul{
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 100px;
+    animation: secondroad 1s ease-in-out;
+}
+
+.todo_area li {
+
+    font-size: 40px;
+    padding-bottom: 15px;
+    align-items:left;
+    
+}
+
+    
+    
+
+#greeting {
+    font-size: 40px;
+    animation: secondroad 1s ease-in-out;
+
+
+}
+
+
+.hidden{
+    display:none;
+}
+
+
+.todo_area{
+    margin-left: 70px;
+}
+
+
+#form_element{
+    padding-bottom: 5px;
+    
+
+}
+
+
+/* The container */
+.container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border:3px solid white;
+      position: relative;
+      border-radius: 5px;
+      opacity:0.4;
+      bottom: -3px;
+  }
+  
+  .checkmark:hover {
+    width: 20px;
+    height: 20px;
+    opacity:1;
+  }
+
+
+  label>text{
+    padding-left: 7px;
+    opacity: 0.4;
+  }
+
+  label>text:hover {
+    opacity: 1;
+    font-size: 110%;
+
+  }
+
+
+
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 3px;
+    top: -15px;
+    width: 10px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);}
+
+    li > .Xmark {
+        font-size: 21px;
+        opacity: 0.6;
+ 
+
+    }
+
+    li> .Xmark:hover {
+        font-size: 25px;
+        opacity: 1;
+
+
+
+    }
+
+    label {
+        padding:10px;
+        text-align: right;
+        color: #ccc;
+    }
+
+   
+    input[type=checkbox]:checked + label.strikethrough{
+        text-decoration: line-through;
+      }
+
+
+
+
+    #wrapper #footerArea{
+        position : absolute;
+        bottom : 0;
+        animation: secondroad 1s ease-in-out;
+        bottom:8%;
+    }
+
+
+
+    .cancel {
+        text-decoration : line-through;
+        text-decoration-style: solid;
+        color:white;
+        opacity: none;
+    }
