@@ -35,10 +35,10 @@ function onGeo(position){
     
     weatherDescription.innerText=
     
-    (`weather:${weather}
+    (`Weather:${weather}
     Feel Temperature: ${feeltem}℃
     Temperature Max: ${temp_max}℃
-    Temperature Min ${temp_min}℃
+    Temperature Min: ${temp_min}℃
     Humidity: ${humidity}
     Description: ${description}`);
 })
