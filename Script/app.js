@@ -10,7 +10,6 @@ const todo_list = document.querySelector("#todo_list");
 const footer = document.querySelector("#footerArea");
 
 
-
 const HIDDEN = "hidden";
 const USERNAME = "username";
 

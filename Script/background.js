@@ -1,5 +1,5 @@
-const backgroundListDay =["1d.png","2d.png"];
-const backgroundListNight =["1n.png","2n.png"];
+const backgroundListDay =["1d.png","2d.png","3d.png","4d.png"];
+const backgroundListNight =["1n.png","2n.png","3n.png","4n.png"];
 const bgImage = document.createElement("style");
 
 const digital =new Date()

@@ -30,7 +30,7 @@ function onGeo(position){
     weathertem.innerText =`${tem}℃`
 
 
-    weather_ele.innerText =`${place} ${country}`;
+    weather_ele.innerText =`Hover Weather! →   ${place} ${country}`;
     
     
     weatherDescription.innerText=
