@@ -1,10 +1,11 @@
-const loginForm = document.querySelector("#form_element");
-const loginInput = document.querySelector("#form_element input");
-const Welcome = document.querySelector("#welcomeBanner");
+const loginForm = document.querySelector("#welcomePage_form");
+const loginInput = document.querySelector("#welcomePage_form input");
+const Welcome = document.querySelector("#welcomeBanners");
 const greeting = document.querySelector("#greetingg");
-const Login = document.querySelector('#loginBt');
+const Login = document.querySelector('#loginBt button');
 const LogOut = document.querySelector("#log_outt");
 const weather = document.querySelector("#weather");
+const clockDiv = document.querySelector("#clock_div");
 const to_Do_Form = document.querySelector("#to_Do_Form");
 const todo_list = document.querySelector("#todo_list");
 const footer = document.querySelector("#footerArea");
@@ -19,7 +20,7 @@ function SubmitForm(event){
     Welcome.classList.add(HIDDEN);
     loginForm.classList.add(HIDDEN);
     localStorage.setItem(USERNAME,username)
-    clock.classList.remove(HIDDEN);
+    clockDiv.classList.remove(HIDDEN);
     weather.classList.remove(HIDDEN);
     to_Do_Form.classList.remove(HIDDEN);
     todo_list.classList.remove(HIDDEN);
@@ -61,7 +62,7 @@ if  (uservalue === null){
     greetingToUser(uservalue);
     Welcome.classList.add(HIDDEN);
     loginForm.classList.add(HIDDEN);
-    clock.classList.remove(HIDDEN);
+    clockDiv.classList.remove(HIDDEN);
     weather.classList.remove(HIDDEN);
     to_Do_Form.classList.remove(HIDDEN);
     todo_list.classList.remove(HIDDEN);

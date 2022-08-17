@@ -23,14 +23,15 @@ function onGeo(position){
     const temp_min =(data.main.temp_min);
     const humidity =(data.main.humidity);
     const description =(data.weather[0].description);
-
+    
+        
     const weather_img = document.createElement("img");
     weather_img.setAttribute("src",`img/${weather}.png`);
     weatherimg.appendChild(weather_img);
     weathertem.innerText =`${tem}℃`
 
 
-    weather_ele.innerText =`Hover Weather! →   ${place} ${country}`;
+    weather_ele.innerText =`${place} ${country}`;
     
     
     weatherDescription.innerText=

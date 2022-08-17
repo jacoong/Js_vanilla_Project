@@ -4,10 +4,8 @@
     padding:0;
     list-style: none;
     transition: all 0.3s ease-in-out;
-    font-family: 'poppins', sans-serif;
     font-weight: 400;
     
-
 }
 
 @keyframes firstroad {
@@ -39,194 +37,146 @@
     }
 }
 
-@keyframes big {
 
-    0% {
-        transform: scale( 1 );
-    }
-    100%{
-        transform: scale(1.3);
-    }
-}
-
-@keyframes weatherdes {
-
-    0% {
-        transform: scale( 0.5 );
-        opacity: 0.2;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 0.2;
-    }
-}
-
-@keyframes adver {
-
-    0% {
-        right:3%;
-    }
-    30%{
-        right:6%
-    }
-    70% {
-        right:3%
-    }
-    85%{
-        right:6%
-    }
-    100%{
-        right:3%
-    }
-}
 
 
 
 body{
-    height: 100vh;
-    width: 100%;  
     background-repeat: no-repeat;
-    text-align: center;
-    position: relative;
     background-size: cover;
-    
+    font-weight: 300;
+    font-family: 'poppins', sans-serif;
+    text-align: center;
 }
 
-#wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#wrapper{
+    width: 100%;
     height: 100vh;
-    flex-direction: column;
 }
 
-#welcomeBanner {
-    height: 29vh;
+#wrapper header{
+    width: 95%;
+    height: 17vh;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+header #log_outt {
+    margin: 3vh 0vh auto;
+}
+    #log_outt .log_out_button_style{
+        border: 0;
+        line-height: 2.5;
+        padding: 0 2vh;
+        font-size: 2.5vh;
+        text-align: center;
+        color: #fff;
+        border-radius: 1vh;
+        background-color: black;
+        background-color:rgba( 255, 255, 255, 0.5 );
+    }
+
+    #log_outt .log_out_button_style:hover{
+        font-size: 4vh;
+    }
+header #weather{
+    margin: 3vh 0vh auto;
+}
+
+header #weather span{
+    font-size: 2vh;
+    }
+    
+    header #weather img{
+        width:7vh;
+        height:7vh;
+    }
+    
+    
+    header #weather #weather_Description{
+        font-size: 2vh;
+        color:black;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 7px;
+        background-color:rgba( 255, 255, 255, 0.5 );
+    }
+    
+
+#wrapper main{
+        width: 100%;
+        height: 47vh;
+        flex-direction: column;
+}
+main #welcomeBanner {
     display: block;
-    font-size: 6vh;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-size:10vh;
     font-weight: 400;
     animation: firstroad 2s ease-in-out;
 }
 
-#welcomeBanner:hover {
-    font-size: 6.5vh;
+main #welcomeBanner:hover {
+    font-size: 12vh;
 }
 
-div #log_outt {
-    font-size: 2vh;
-    text-align: center;
-    animation: secondroad 1s ease-in-out;
-    position: absolute;
-    top: 4%;
-    left: 3%;
-    width: 14vh;
+main #welcomePage_form {
+    position: relative;
+    top: 18px;
+}
+
+#welcomePage_form #welcomePager_input{
+    width: 30vh;
     height: 5vh;
-    border:0.3vh solid white;
-    border-radius: 1vh;
-    opacity:0.8;
-}
-
-div #log_outt:hover {
-    width: 17vh;
-    height: 7vh;
-    font-size: 2.5vh;
-}
-
-
-nav audio {
-    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
-    width: 2vh;
-    height: 3vh;
-
-}
-
-
-#clock{
-    font-size: 13vh;
-    opacity: 0.9;
-    animation: secondroad 1s ease-in-out;
-    padding-bottom: 2vh;
-    
-    
-}
-
-#clock:hover{
-    opacity: 0.5;
-    font-size: 16vh;
-}
-
-div #weather{
-    font-size: 2vh;
-    text-align: right;
-    animation: secondroad 0.5s ease-in-out;
-    position: absolute;
-    top: 5%;
-    right: 4%;
-}
-
-div #weather:hover{
-    font-size: 3vh;
-}
-#weather img{
-    width:5vh;
-    height:5vh;
-}
-
-#weatherbottom span{
-    font-size: 3.3vh;
-    animation: adver 3s ;
-    animation-iteration-count: 2;
-}
-
-
-div #weather_Description{
-    animation: weatherdes 0.4s ease-in-out;
-    font-size: 2.8vh;
+    font-size: 3.5vh;
+    text-align: center;
+    color: white;
     border: none;
-    border-radius: 1.5vh;
-    position: absolute;
-    top: 131%;
-    right: -2%;
-    width: 35vh;
-    height: 20vh;
-    color:whtie;
-    text-align: left;
-    background-color:transparent;
+    border-bottom: 0.1vh solid #fff;
+    background: transparent;
     opacity: 0.7;
-    font-weight: 600;
+}
+
+#welcomePage_form #welcomePager_input::placeholder{
+    color: white;
+}
+
+#welcomePage_form #welcomePager_input:hover {
+    width: 40vh;
+    height: 7vh;
+    font-size: 4.5vh;
+    opacity: 1;
+}
+
+#welcomePage_form #welcomePager_input:focus {
+    outline: none;
+}
+
+main #loginBt{
+    position: relative;
+    top:11px;
+}
+
+#loginBt button {
+    animation: 0.02s easy ease-in-out;
+    line-height: 2;
+    padding: 0 2vh;
+    font-size: 2.8vh;
+    text-align: center;
+    color: #fff;
+    border-radius: 1vh;
+    border: none;
+    background-color: black;
+    background-color:rgba( 255, 255, 255, 0.5 );
+    transition: all 1 ease-in-out;
 
 }
 
-
-#greetingg{
-    font-size:3vh;
-    padding-bottom: 6vh;
-
-}
-
-@keyframes fat{
-    from  { 
-        width: 12vh; 
+#loginBt button:hover {
+        font-size: 3.2vh;
+        padding: 0 3vh;
     }
-    to{ 
-        width: 30vh; 
-    }
-  }
-@keyframes logfat{
-    from  { 
-        background-color: white;
-        color: black; 
-        opacity: 0.4;
-    }
-    to{ 
-        background-color: white;
-        color: black; 
-    }
-  }
 
 main{
     display: flex;
@@ -236,117 +186,99 @@ main{
 
 }
 
-input[type=text] {
+
+#clock{
+    font-size: 15vh;
+    opacity: 0.9;
+    animation: secondroad 1s ease-in-out;
+    padding-bottom: 2vh;
+    
+    
+}
+
+#clock:hover{
+    opacity: 0.7;
+    font-size: 18vh;
+}
+
+
+
+#greetingg_div{
+    padding-bottom: 2vh;
+
+}
+
+#greetingg{
+    animation: secondroad 1s ease-in-out;
+    font-size: 5vh;
+    opacity: 0.8;
+}
+
+#greetingg:hover{
+    font-size: 6vh;
+    opacity: 1;
+}
+
+
+main #to_Do_input{
+    animation: secondroad 1s ease-in-out;
+    width: 20vh;
+    height: 5vh;
+    font-size: 3vh;
     text-align: center;
-    width: 16vh;
-    height: 3vh;
-    font-size: 2vh;
     color: white;
     border: none;
     border-bottom: 0.1vh solid #fff;
     background: transparent;
-    opacity: 0.7;
-    padding-left: 1vh;
-    padding-right: 1vh;
-    
+    opacity: 0.7;	
 }
 
-    
-    input[type=text]:hover {
-        opacity: 1;
-        width:20vh;
-        height: 4vh;
+main #to_Do_input:hover{
+    width: 23vh;
+    height: 6vh;
+    font-size: 3.5vh;
+    opacity: 1;	
+}
 
-    }
-
-    input[type=text]:focus {
-        outline: none;
-        opacity: 1;
-        width:20vh;
-        height: 4vh;
-    }
-
-    input[type=text]::placeholder {
-        color: white;
-    }
-
-button {
-    display: inline;
-    width: 10vh;
-    height: 3vh;
-    background-color: black;
+main #to_Do_input::placeholder{
     color: white;
-    border-radius: 1.5vh;
-    outline: none;
-    font-size: 1.8vh;
-    border:none;
-    opacity: 0.5;
-    font-weight: 400;
-
 }
 
-    button:hover {
-        animation: 0.02s easy ease-in-out;
-        color:white; 
-        opacity: 0.8;
-        width: 11vh;
-        height: 3.5vh;
+main #to_Do_input:focus{
+    outline: none;
+}
 
-    }
+.todo_area{
+    position: relative;
+    width: 100%;
+    height: 0vh;
+}
+
 .todo_area ul{
     list-style: none;
-    margin-top: 3vh;
-    margin-right: 10vh;
     animation: secondroad 1s ease-in-out;
+    position: relative;
+    top:1%;
 }
 
 .todo_area li {
-
-    font-size: 4.9vh;
-    padding-bottom: 1.5vh;
-    align-items:left;
-    
+    padding-bottom: 1.5vh; 
 }
 
 .todo_area text {
     font-size: 2.6vh;
-    padding-left: 0.7vh;
-    opacity: 0.7;
 }
 
 
 .todo_area text:hover {
     opacity: 1;
     font-size: 3.3vh;
-
   }
   
+
     
-    
-
-#greeting {
-    font-size: 4vh;
-    animation: secondroad 1s ease-in-out;
-
-
-}
-
-
 .hidden{
     display:none;
-}
-
-
-.todo_area{
-    margin-left: 7vh;
-    padding-bottom: 14vh;
-}
-
-
-#form_element{
-    padding-bottom: 0.5vh;
-    
-
 }
 
 
@@ -407,7 +339,7 @@ button {
     display: block;
   }
   
-  /* Style the checkmark/indicator */
+
   .container .checkmark:after {
     left: 0.3vh;
     top: -1.2vh;
@@ -449,13 +381,20 @@ button {
 
 
 
-    #wrapper #footerArea{
-        position : absolute;
-        bottom : 0;
+    #wrapper footer{
+        width: 100%;
+        position: absolute;
         animation: secondroad 1s ease-in-out;
-        bottom:8%;
+        bottom: 2%;
     }
 
+    footer #quotes{
+        font-size: 1vh;
+        opacity: 0.6;
+    }
+    footer #quotes:hover{
+        opacity: 1;
+    }
 
 
     .cancel {

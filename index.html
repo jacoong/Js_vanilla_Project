@@ -9,50 +9,54 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 
-    <nav>
-        <div id="navR">
 
-        </div>
-    </nav>
 <body>
 
     <div id="wrapper">
-        
+        <header>
+            <div id="log_outt" class="hidden">
+            <button class="log_out_button_style">Change Name</button>
+            </div>
             <div id ="weather" class="hidden">
                 <span></span>
                 <div id="weatherbottom">
                     <span></span>
                     <span></span>
                 </div>
-                <div id="weather_Description" class="hidden">
-
+                <div id="weather_Description_area">
+                <div id="weather_Description" class="hidden"></div>
                 </div>
             </div>
             
-            <header>
-                <button id="log_outt" class="hidden">Change Name</button>
-                <div id="clock" class="hidden">
-    </div>
+            
+        </header>
+ 
+        <main>
 
-
-            </header>   
-            <main>
+            <div id="clock_div" class="hidden">
+                <h1 id="clock"></h1>
+            </div>
                 
-                <div class="main_form">
-                    <form id="form_element">
-                        <div id="welcomeBanner">Welcome!</br>What is your name?</div>
-                        <input  id="form_element_input"
+            <div class="main_form">
+                    <div id="welcomeBanners">
+                        <span id="welcomeBanner">Welcome!</br>What is your name?</span>
+                    </div>
+                    <form id="welcomePage_form">
+                        <input  id="welcomePager_input"
                                 required
                                 type="text" 
-                                maxlength="15"
+                                maxlength="10"
                                 autocomplete="off"
-                                placeholder="Put your Name"
-                >
+                                placeholder="Put your Name">
 
-                        <button id="loginBt">log-in</button>
+                        <div id="loginBt">
+                        <button >log-in</button>
+                        </div>
                     </form>
-                    <h1 id="greetingg" class="hidden"></h1>
-            
+
+                    <div id="greetingg_div">
+                    <h1 id="greetingg"  class="hidden"></h1>
+                    </div>
 
 
                     <form id="to_Do_Form" class="hidden">
@@ -62,13 +66,16 @@
                             placeholder="To Do List"
                             required>
                     </form>
-                </div>
-            </main>
+
                     <div class="todo_area">
                         <ul id = todo_list class="hidden"></ul>
-                    </div>  
+                    </div> 
+            </div>
+        </main>
 
-        <div id="footerArea" class="hidden">
+ 
+
+        <footer id="footerArea" class="hidden">
 
             <div id="quotes" class="center">
                 <span></span>
@@ -76,7 +83,7 @@
             </div>
             <div id="right">
             </div>
-        </div> 
+        </footer> 
     </div>  
 
 
