@@ -12,10 +12,12 @@ function onGeo(position){
     .then((data) => {
     const weatherimg = document.querySelector("#weatherbottom span:first-child");
     const weathertem = document.querySelector("#weatherbottom span:last-child");
+    weathertem.classList.add("degree");
     const weather_ele = document.querySelector("#weather span:first-child");
     const weather=(data.weather[0].main);
 
-    const tem= (data.main.temp);
+    let tem= (data.main.temp);
+    tem = Math.round(tem);
     const country=(data.sys.country);
     const place = (data.name);
     const feeltem =(data.main.feels_like);

@@ -11,8 +11,6 @@ const quotes = [{
     writter : "- Henry David Thoreau"},
     {quote : "The way to get started is to quit talking and begin doing.",
     writter : "- Walt Disney"},
-    {quote : "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
-    writter : "- Albert Schweitzer"},
     {quote : "Success seems to be connected with action. Successful people keep moving.",
     writter : "- Conrad Hilton"},
     {quote : "In order to succeed, we must first believe that we can.",
