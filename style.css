@@ -217,7 +217,28 @@ main{
     padding-bottom: 2vh;
 }
 
-
+#music {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+#music #player {
+    display: none;
+  }
+  
+#music img {
+    filter: var(--filter-seashell);
+    cursor: pointer;
+    transition: all 0.5s linear;
+  }
+#music img:hover {
+    transform: scale(1.1);
+  }
+#music span {
+    flex-basis: 100%;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 10px;
+  }
 
 
 

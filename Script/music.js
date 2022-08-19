@@ -1,22 +1,36 @@
-var tag = document.createElement("script");
+const tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    height: "300",
-    width: "300",
-    videoId: "FUeXStr48qY",
-    events: {},
-  });
+    player = new YT.Player("player", {
+        height: "300",
+        width: "300",
+        videoId: "FUeXStr48qY",
+        playerVars: { 'autoplay': 1},
+        events: {'onReady': onPlayerReady,},
+        
+      }
+      );
+      console.log("video is ready");
+}
+
+function onPlayerReady(event) {
+  var embedCode = event.target.getVideoEmbedCode();
+  console.log(player.getPlaylist(["HWCJI7mCHZE","O4WRwIt5hA4","Tt4X3Dy6RB8","xUIUzSCQJks"]));
+
+  if (document.getElementById('embed-code')) {
+    document.getElementById('embed-code').innerHTML = embedCode;
+  }
+
 }
 
 const PLAYLIST_ID = [
   {
-    playListName: "공부할때 듣기 좋은 음악",
-    videoId: "FUeXStr48qY",
+    playListName: "Fall Out Boy - The Last Of The Real Ones",
+    videoId: "HWCJI7mCHZE",
   },
   {
     playListName: "같이해요 로파이 노동요",
@@ -46,6 +60,7 @@ function handlePauseBtnClick() {
 }
 
 let currentPlayerList = 0;
+
 function handleNextBtnClick() {
   if (currentPlayerList >= PLAYLIST_ID.length) {
     currentPlayerList = 0;
@@ -57,6 +72,7 @@ function handleNextBtnClick() {
     PLAYLIST_ID[currentPlayerList].playListName
   }`;
 }
+
 
 const playButton = document.querySelector("#play");
 const pauseButton = document.querySelector("#pause");
