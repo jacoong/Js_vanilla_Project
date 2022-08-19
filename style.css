@@ -222,7 +222,7 @@ main{
     overflow: hidden;
   }
 #music #player {
-    display: none;
+display:none;
   }
   
 #music img {

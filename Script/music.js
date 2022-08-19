@@ -9,23 +9,15 @@ function onYouTubeIframeAPIReady() {
         height: "300",
         width: "300",
         videoId: "FUeXStr48qY",
-        playerVars: { 'autoplay': 1},
-        events: {'onReady': onPlayerReady,},
+        playerVars: {autoplay: 0},
+        events: {},
         
       }
       );
       console.log("video is ready");
 }
 
-function onPlayerReady(event) {
-  var embedCode = event.target.getVideoEmbedCode();
-  console.log(player.getPlaylist(["HWCJI7mCHZE","O4WRwIt5hA4","Tt4X3Dy6RB8","xUIUzSCQJks"]));
-
-  if (document.getElementById('embed-code')) {
-    document.getElementById('embed-code').innerHTML = embedCode;
-  }
-
-}
+const currentSongName = document.querySelector("#playList");
 
 const PLAYLIST_ID = [
   {
@@ -48,30 +40,35 @@ const PLAYLIST_ID = [
 
 const playList = document.querySelector("#playList");
 
-function handlePlayBtnClick() {
-  player.playVideo();
-  playList.innerText = `List ${currentPlayerList + 1} - ${
-    PLAYLIST_ID[currentPlayerList].playListName
-  }`;
-}
+let currentPlay = 0
+console.log(currentPlay);
 
-function handlePauseBtnClick() {
+function handlePlayBtnClick(){
+  player.playVideo(PLAYLIST_ID[currentPlay]);
+  currentSongName.innerText =`${PLAYLIST_ID[currentPlay].playListName}`
+} 
+
+function handlePauseBtnClick(){
   player.pauseVideo();
-}
+} 
 
-let currentPlayerList = 0;
-
-function handleNextBtnClick() {
-  if (currentPlayerList >= PLAYLIST_ID.length) {
-    currentPlayerList = 0;
-  } else {
-    currentPlayerList += 1;
-  }
-  player.loadVideoById(PLAYLIST_ID[currentPlayerList].videoId);
-  playList.innerText = `List ${currentPlayerList + 1} - ${
-    PLAYLIST_ID[currentPlayerList].playListName
-  }`;
+function handleNextBtnClick(){
+if (currentPlay < PLAYLIST_ID.length-1){
+  player.loadVideoById(PLAYLIST_ID[currentPlay].videoId);
+  currentSongName.innerText =`${PLAYLIST_ID[currentPlay].playListName}`
+  currentPlay = currentPlay+1
+console.log(currentPlay);
 }
+  
+if (currentPlay >=(PLAYLIST_ID.length-1)){
+  currentPlay = 0;
+  player.loadVideoById(PLAYLIST_ID[currentPlay].videoId);
+  currentSongName.innerText =`${PLAYLIST_ID[currentPlay].playListName}`
+}
+} 
+
+
+
 
 
 const playButton = document.querySelector("#play");
