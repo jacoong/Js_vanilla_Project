@@ -44,11 +44,15 @@ let currentPlay = 0
 console.log(currentPlay);
 
 function handlePlayBtnClick(){
+  playButton.classList.toggle(HIDDEN);
+  pauseButton.classList.toggle(HIDDEN);
   player.playVideo(PLAYLIST_ID[currentPlay]);
   currentSongName.innerText =`${PLAYLIST_ID[currentPlay].playListName}`
 } 
 
 function handlePauseBtnClick(){
+  playButton.classList.toggle(HIDDEN);
+  pauseButton.classList.toggle(HIDDEN);
   player.pauseVideo();
 } 
 

@@ -37,6 +37,37 @@
     }
 }
 
+@keyframes thirdroad{
+    0% {
+        transform: scaleX(0.1);
+        opacity: 0.05;
+    }
+    15%{
+        transform: scaleX(0.2);
+        opacity: 0.1;
+    }
+    
+    20%{
+        transform: scaleX(0.2);
+        opacity: 0.1;
+    }
+
+    50%{
+        transform: scaleX(0.2);
+        opacity: 0.2;
+    }
+
+    95%{
+        transform: scaleX(0.9.5);
+        opacity: 1;
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 0.5;
+    }
+}
+
+
 
 
 
@@ -79,7 +110,7 @@ header #log_outt {
     }
 
     #log_outt .log_out_button_style:hover{
-        font-size: 4vh;
+        font-size: 2.5vh;
     }
 header #weather{
     margin: 3vh 0vh auto;
@@ -190,11 +221,45 @@ main{
     display: flex;
     justify-content: center;
     align-items:center;
-    
+   
 
 }
+
+#searchForm{
+    height: 8vh;
+    width: 90vh;
+}
+
+.searchInput{
+    height: 8vh;
+    width: 90vh;
+    border-radius: 4vh;
+    opacity: 0.5;
+    border-style: none;
+    text-align: left;
+    color: rgb(55, 53, 56);
+    font-size: 4vh;
+    padding-left: 4vh;
+    caret-color: rgb(109, 107, 110);
+    font-weight:700;
+    font-size: 3vh;
+    animation: thirdroad 1.3s;
+
+}
+
+.searchInput:hover{
+    scale:110%;
+    opacity: 0.8;
+}
+
+.searchInput:focus{
+    outline: none;
+    scale:110%;
+    opacity: 0.8;
+}
+
 #clock_div{
-    height: 21vh;
+    height: 22vh;
 }
 
 #clock_div:hover{
@@ -210,7 +275,7 @@ main{
 
 #date{
     position: relative;
-    bottom: 15%;
+    bottom: 8%;
     font-size: 5vh;
     opacity: 0.9;
     animation: secondroad 1s ease-in-out;
@@ -220,22 +285,28 @@ main{
 #music {
     flex-wrap: wrap;
     overflow: hidden;
+    margin: 3vh 0vh auto;
   }
 #music #player {
 display:none;
   }
+
   
 #music img {
     filter: var(--filter-seashell);
     cursor: pointer;
     transition: all 0.5s linear;
+    height: 3.5vh;
+    margin-top: 1vh;
+    margin-right: 1.5vh;
   }
 #music img:hover {
     transform: scale(1.1);
   }
 #music span {
+    display: block;
     flex-basis: 100%;
-    font-size: 15px;
+    font-size: 1vh;
     text-align: left;
     margin-left: 10px;
   }
@@ -243,13 +314,14 @@ display:none;
 
 
 #greetingg_div{
-    padding: 3vh 0vh;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
 
 }
 
 #greetingg{
     animation: secondroad 1s ease-in-out;
-    font-size: 2.5vh;
+    font-size: 3vh;
     opacity: 0.8;
 }
 

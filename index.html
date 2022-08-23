@@ -18,12 +18,12 @@
             <button class="log_out_button_style">Change Name</button>
             </div>
 
-            <div id="music">
+            <div id="music" class="hidden">
                 <div id="player"></div>
-                <img id="before" src="https://yunki-kim.github.io/to-do-list-app/img/ico/play_arrow.svg" />
-                <img id="play" src="https://yunki-kim.github.io/to-do-list-app/img/ico/play_arrow.svg" />
-                <img id="pause" src="https://yunki-kim.github.io/to-do-list-app/img/ico/pause.svg" />
-                <img id="next" src="https://yunki-kim.github.io/to-do-list-app/img/ico/skip_next.svg" />
+                <img id="before" src="img/before.png" />
+                <img id="play" src="img/play.png" />
+                <img id="pause" class="hidden" src="img/stop.png" />
+                <img id="next" src="img/next.png" />
                 <span id="playList">Click the Play button</span>
             </div>
 
@@ -42,7 +42,13 @@
         </header>
  
         <main>
-
+            <form id="searchForm" class="hidden">
+                <input class="searchInput"
+                        required
+                        type="text" 
+                        autocomplete="off">
+    
+            </form>
             <div id="clock_div" class="hidden">
                 <h1 id="clock"></h1>
                 <h2 id="date"></h2>
@@ -105,6 +111,8 @@
     <script src="Script/todo.js"></script>
     <script src="Script/weather.js"></script>
     <script src="Script/music.js"></script>
+    <script src="Script/googleSearch.js"></script>
+
 
 </body>
 </html>

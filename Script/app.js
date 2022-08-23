@@ -9,10 +9,17 @@ const clockDiv = document.querySelector("#clock_div");
 const to_Do_Form = document.querySelector("#to_Do_Form");
 const todo_list = document.querySelector("#todo_list");
 const footer = document.querySelector("#footerArea");
+const music = document.querySelector("#music");
+
 
 
 const HIDDEN = "hidden";
 const USERNAME = "username";
+
+window.onload = function() {
+    document.querySelector(".searchInput").focus();
+  };
+
 
 function SubmitForm(event){ 
     event.preventDefault();
@@ -26,6 +33,9 @@ function SubmitForm(event){
     todo_list.classList.remove(HIDDEN);
     footer.classList.remove(HIDDEN);
     LogOut.classList.remove(HIDDEN);
+    music.classList.remove(HIDDEN);
+    googleForm.classList.remove(HIDDEN);
+    
     greetingToUser(username)
 
 }
@@ -69,6 +79,8 @@ if  (uservalue === null){
     footer.classList.remove(HIDDEN);
     LogOut.classList.remove(HIDDEN);
     greeting.classList.remove(HIDDEN);
+    music.classList.remove(HIDDEN);
+    googleForm.classList.remove(HIDDEN);
 
 
 }
