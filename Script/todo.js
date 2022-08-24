@@ -3,10 +3,13 @@ const toDOInput = toDOForm.querySelector("#to_Do_input");
 const todoList = document.getElementById('todo_list');
 
 const TODOSKEY = "toDoVal";
+const DONEKEY = "DoneToDo"
 let  toDos = []
+let  DonetoDos = []
 
 function SavetoDo(){
  localStorage.setItem(TODOSKEY,JSON.stringify(toDos));
+ localStorage.setItem(DONEKEY,JSON.stringify(DonetoDos));
 }
 
 
@@ -28,6 +31,7 @@ function PaintList(toDoValueOjb){
     li.id = toDoValueOjb.id
     const label= document.createElement("label");
     label.classList.add("container");
+    label.id = toDoValueOjb.id;
     const checkb = document.createElement("input");
     checkb.setAttribute('type','checkbox');
     const X = document.createElement("span");
@@ -54,16 +58,23 @@ function PaintList(toDoValueOjb){
 
 function cancel(event){
     const li = (event.target.parentElement);
-    li.classList.toggle("cancel");
+    li.classList.add("cancel")
+    if (li.classList.contains("cancel")){
+        DonetoDos.push({text:li.innerText,id:li.id});
+        SavetoDo();
+    }
+    else{
+        DonetoDos.remove({text:li.innerText,id:li.id});
+        SavetoDo();
+        li.classList.remove("cancel");
 }
-
+}
 
 
 function DeteleList(event){
     const li = (event.target.parentElement);
-    li.classList.add("delete");
+    console.log(li);
     li.remove();
-    console.log(li.id);
     toDos = toDos.filter(todo => todo.id !== parseInt(li.id));
     SavetoDo();
     console.log(toDos);
@@ -76,10 +87,12 @@ if (saveTodo !== null){
     const paraSavetodo = JSON.parse(saveTodo);
     toDos = paraSavetodo;
     paraSavetodo.forEach((item) => PaintList(item)
-    );
+    
+    );}
 
-}
-
+/*}if (saveTodo !== null && toDos[toDos.length-1].id ===DonetoDos){
+    console.log("succsed");
+}*/
 
 
 toDOForm.addEventListener("submit",HandletoDoForm)
