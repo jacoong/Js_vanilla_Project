@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player("player", {
         height: "300",
         width: "300",
-        videoId: "HWCJI7mCHZE",
+        videoId: "Rz6hFvT4uWo",
         playerVars: {autoplay: 0},
         events: {},
         
@@ -19,22 +19,25 @@ function onYouTubeIframeAPIReady() {
 
 const currentSongName = document.querySelector("#playList");
 
+
+
 const PLAYLIST_ID = [
   {
-    playListName: "[1]Fall Out Boy - The Last Of The Real Ones",
-    videoId: "HWCJI7mCHZE",
+    playListName: "Taeyeon (태연) - 제주도의 푸른 밤 (The Blue Night Of Jeju Island) ",
+    videoId: "Rz6hFvT4uWo"
+  },
+
+  {
+    playListName: "Jazz Piano Radio - Slow Jazz Music",
+    videoId: "Dx5qFachd3A",
   },
   {
-    playListName: "[2]같이해요 로파이 노동요",
-    videoId: "O4WRwIt5hA4",
+    playListName: "𝐃𝐫𝐚𝐠𝐨𝐧 𝐍𝐢𝐠𝐡𝐭 - 𝐄𝐧𝐝 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐨𝐫𝐥𝐝",
+    videoId: "RFJCLaq5wL0",
   },
   {
-    playListName: "[3]맑은 아침을 맞이하는 기분 좋은 연주곡",
-    videoId: "Tt4X3Dy6RB8",
-  },
-  {
-    playListName: "[4]창문을 열고, 여름 햇살을 맞으며 듣기 좋은 피아노 연주곡",
-    videoId: "xUIUzSCQJks",
+    playListName: "Kyuhyun (규현) - 삼다도 소식 (Samdado News)",
+    videoId: "LIpyNn7GKx4",
   },
 ];
 

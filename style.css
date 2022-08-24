@@ -110,7 +110,7 @@ header #log_outt {
     }
 
     #log_outt .log_out_button_style:hover{
-        font-size: 2.5vh;
+        font-size: 2.5vh !important; 
     }
 header #weather{
     margin: 3vh 0vh auto;
@@ -136,11 +136,12 @@ header #weather span{
     
     header #weather #weather_Description{
         font-size: 2vh;
-        color:black;
+        color:rgb(53, 46, 46);
         font-weight: 600;
-        text-align: center;
+        text-align: left;
         border-radius: 7px;
         background-color:rgba( 255, 255, 255, 0.5 );
+        animation: secondroad 0.8s;
     }
     
 
@@ -225,37 +226,79 @@ main{
 
 }
 
-#searchForm{
-    height: 8vh;
-    width: 90vh;
+#searchImageDiv{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 6%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
+
+#searchForm_Size{
+    height: 5vh;
+    width: 100%;
+    position: relative;
+}
+
+
+#searchImage{
+    height: 1.4vh;
+    width: 1.4vh;
+    display: block;
+    margin: auto;
+    opacity: 0.5;
+}
+
+
+#searchForm{
+    height: 5vh;
+    width: 46.5%;
+    animation: thirdroad 1.3s;
+}
+
+#searchForm:hover{
+    scale:110%;
+    opacity: 0.8;
+}
+
+
+
 .searchInput{
-    height: 8vh;
-    width: 90vh;
+    height: 100%;
+    width: 93%;
     border-radius: 4vh;
     opacity: 0.5;
     border-style: none;
     text-align: left;
-    color: rgb(55, 53, 56);
-    font-size: 4vh;
-    padding-left: 4vh;
+    color: rgb(26, 25, 27);
+
+    padding-left: 7%;
     caret-color: rgb(109, 107, 110);
-    font-weight:700;
-    font-size: 3vh;
+    font-weight: 400;
+    font-size: 2.2vh;
     animation: thirdroad 1.3s;
+
 
 }
 
+
+
 .searchInput:hover{
-    scale:110%;
+    scale:103%;
     opacity: 0.8;
 }
 
 .searchInput:focus{
     outline: none;
-    scale:110%;
+    scale:103%;
     opacity: 0.8;
+}
+
+.searchInput::placeholder{
+    color: rgb(70, 69, 69);
 }
 
 #clock_div{
@@ -283,9 +326,14 @@ main{
 }
 
 #music {
+
+    position: relative;
     flex-wrap: wrap;
-    overflow: hidden;
     margin: 3vh 0vh auto;
+    left: 1.5vh;
+    bottom: 14vh;
+    opacity: 0.7;
+
   }
 #music #player {
 display:none;
@@ -298,7 +346,7 @@ display:none;
     transition: all 0.5s linear;
     height: 3.5vh;
     margin-top: 1vh;
-    margin-right: 1.5vh;
+    margin-right: 2.5vh;
   }
 #music img:hover {
     transform: scale(1.1);
@@ -307,8 +355,8 @@ display:none;
     display: block;
     flex-basis: 100%;
     font-size: 1vh;
-    text-align: left;
-    margin-left: 10px;
+    margin-right: 2.5vh;
+    margin-top: 1vh;
   }
 
 

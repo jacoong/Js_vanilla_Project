@@ -18,14 +18,6 @@
             <button class="log_out_button_style">Change Name</button>
             </div>
 
-            <div id="music" class="hidden">
-                <div id="player"></div>
-                <img id="before" src="img/before.png" />
-                <img id="play" src="img/play.png" />
-                <img id="pause" class="hidden" src="img/stop.png" />
-                <img id="next" src="img/next.png" />
-                <span id="playList">Click the Play button</span>
-            </div>
 
             <div id ="weather" class="hidden">
                 <span></span>
@@ -42,11 +34,28 @@
         </header>
  
         <main>
+
+            <div id="music" class="hidden">
+                <div id="player"></div>
+                <img id="before" src="img/before.png" />
+                <img id="play" src="img/play.png" />
+                <img id="pause" class="hidden" src="img/stop.png" />
+                <img id="next" src="img/next.png" />
+                <span id="playList">Click the Play button</span>
+            </div>
+
             <form id="searchForm" class="hidden">
-                <input class="searchInput"
-                        required
-                        type="text" 
-                        autocomplete="off">
+                <div id="searchForm_Size">
+                    <input class="searchInput"
+                            required
+                            type="text" 
+                            autocomplete="off"
+                            placeholder="Google 검색 또는 URL 입력">
+                    <div id="searchImageDiv">
+                            
+                            <img id="searchImage" src="img/search_icon.png"></img>
+                    </div>
+                </div>
     
             </form>
             <div id="clock_div" class="hidden">

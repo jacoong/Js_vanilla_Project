@@ -1,5 +1,5 @@
 const googlesearch = document.querySelector(".searchInput");
-const googleForm = document.querySelector("#searchForm");
+
 
 function googlesearchSubmit(event){
     event.preventDefault();
