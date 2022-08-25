@@ -43,7 +43,8 @@ function PaintList(toDoValueOjb){
     text.innerText = toDoValueOjb.text;
 
 
-    checkb.addEventListener("click",cancel);
+    checkb.addEventListener("mouseup",cancel);
+    checkb.addEventListener("click",test);
     X.addEventListener("click",DeteleList);
 
     label.appendChild(checkb);
@@ -58,16 +59,37 @@ function PaintList(toDoValueOjb){
 
 function cancel(event){
     const li = (event.target.parentElement);
-    li.classList.add("cancel")
+    console.log(li);
+    li.classList.toggle("cancel");
     if (li.classList.contains("cancel")){
-        DonetoDos.push({text:li.innerText,id:li.id});
+        
+        DonetoDos.push({text:li.innerText,id:(li.id)});
+        SavetoDo();
+        console.log("통과됨");
+        
+    }
+
+    if (!li.classList.contains("cancel")){
+        DonetoDos= DonetoDos.filter(Donetodo => parseInt(Donetodo.id) !== parseInt(li.id));
         SavetoDo();
     }
-    else{
-        DonetoDos.remove({text:li.innerText,id:li.id});
-        SavetoDo();
-        li.classList.remove("cancel");
+
 }
+
+function test(){
+    li.classList.toggle("cancel");
+}
+
+function PaintCheckList(item){
+    item.id = parseInt(item.id);
+    const FoundTodoList = document.getElementById(`${item.id}`);
+    const Label = FoundTodoList.firstChild;
+    const checkmark = Label.querySelector(".checkmark");
+    checkmark.click();
+    console.log("aa");
+  
+    
+
 }
 
 
@@ -82,17 +104,20 @@ function DeteleList(event){
 
 
 const saveTodo =  localStorage.getItem(TODOSKEY);
+const savedoneTodo =  localStorage.getItem(DONEKEY);
 
 if (saveTodo !== null){
     const paraSavetodo = JSON.parse(saveTodo);
     toDos = paraSavetodo;
-    paraSavetodo.forEach((item) => PaintList(item)
-    
-    );}
+    paraSavetodo.forEach((item) => PaintList(item)   
+    );
+    const parasavedoneTodo = JSON.parse(savedoneTodo);
+    DonetoDos = parasavedoneTodo;
+    parasavedoneTodo.forEach((item) => PaintCheckList(item)   
+    );
+}
 
-/*}if (saveTodo !== null && toDos[toDos.length-1].id ===DonetoDos){
-    console.log("succsed");
-}*/
+
 
 
 toDOForm.addEventListener("submit",HandletoDoForm)
