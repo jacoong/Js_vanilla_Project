@@ -43,8 +43,7 @@ function PaintList(toDoValueOjb){
     text.innerText = toDoValueOjb.text;
 
 
-    checkb.addEventListener("mouseup",cancel);
-    checkb.addEventListener("click",test);
+    checkb.addEventListener("click",cancel);
     X.addEventListener("click",DeteleList);
 
     label.appendChild(checkb);
@@ -61,6 +60,9 @@ function cancel(event){
     const li = (event.target.parentElement);
     console.log(li);
     li.classList.toggle("cancel");
+    if (li.classList.contains("Z")){
+        li.classList.remove("cancel")};
+
     if (li.classList.contains("cancel")){
         
         DonetoDos.push({text:li.innerText,id:(li.id)});
@@ -76,17 +78,22 @@ function cancel(event){
 
 }
 
-function test(){
-    li.classList.toggle("cancel");
-}
-
 function PaintCheckList(item){
     item.id = parseInt(item.id);
     const FoundTodoList = document.getElementById(`${item.id}`);
     const Label = FoundTodoList.firstChild;
     const checkmark = Label.querySelector(".checkmark");
-    checkmark.click();
-    console.log("aa");
+    Label.classList.add("Z");
+    Label.click();
+    Label.addEventListener("click",realone(Label));
+
+    function realone(Label){
+        Label.classList.add("cancel");
+        console.log("진짜통과");
+        DonetoDos.push({text:Label.innerText,id:(Label.id)});
+        console.log(DonetoDos);
+        SavetoDo();
+    }
   
     
 
@@ -98,6 +105,7 @@ function DeteleList(event){
     console.log(li);
     li.remove();
     toDos = toDos.filter(todo => todo.id !== parseInt(li.id));
+    DonetoDos = DonetoDos.filter(Doneto => Doneto.id  !== (li.id));
     SavetoDo();
     console.log(toDos);
 }
