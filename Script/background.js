@@ -13,7 +13,7 @@ if(hours>6 & hours<=18){
     bgImage.innerText = `body {background-image: url("img/${bg}"); background-position: center; background-repeat: no-repeat; background-size: cover; }`;
     document.head.appendChild(bgImage);
 
-}else if(hours>18 & hours<=24 || hours>0 & hours<=6){
+}else{
     const choseimageNight = Math.floor(Math.random()*backgroundListNight.length);
     const bg = (backgroundListNight[choseimageNight]);
     

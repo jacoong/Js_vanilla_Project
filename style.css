@@ -95,7 +95,8 @@ body{
 
 
 header #log_outt {
-    margin: 3vh 0vh auto;
+    display: flex;
+    align-items: center;
 }
     #log_outt .log_out_button_style{
         border: 0;
@@ -109,11 +110,24 @@ header #log_outt {
         background-color:rgba( 255, 255, 255, 0.5 );
     }
 
+    @media (max-width:600px){
+        #log_outt .log_out_button_style{
+            padding: 0 1px;
+            font-size: 1rem;
+        }
+    }
+
     #log_outt .log_out_button_style:hover{
         font-size: 2.5vh !important; 
     }
 header #weather{
     margin: 3vh 0vh auto;
+}
+
+@media (max-width:600px){
+    header #weather{
+        width:25vw;
+    }
 }
 
 header #weather span{
@@ -122,17 +136,33 @@ header #weather span{
     font-size: 2vh;
     }
 
+    @media (max-width:600px){
+        header #weather span{
+            font-size: 3vw;
+        }
+    }
+
     header #weather .degree{
         font-size: 4vh;
         position: relative;
         bottom: 1.8vh;}
 
+        @media (max-width:600px){
+            header #weather .degree{
+                font-size: 5vw;
+            }
+        }
     
     header #weather img{
         width:7vh;
         height:7vh;
     }
     
+    @media (max-width:600px){
+        header #weather img{
+            width:10vw;
+        }
+    }
     
     header #weather #weather_Description{
         font-size: 2vh;
@@ -255,9 +285,17 @@ main{
 
 #searchForm{
     height: 5vh;
-    width: 46.5%;
+    width: 45vw;
     animation: thirdroad 1.3s;
+    transition: width 1s ease-in-out;
 }
+
+@media (max-width:1200px){
+    #searchForm{
+        width:75vw;
+    }
+}
+
 
 #searchForm:hover{
     scale:110%;
@@ -300,6 +338,15 @@ main{
 
 #clock_div{
     height: 22vh;
+    margin-top: 3vw;
+    transition: all 1s ease-in-out;
+}
+
+@media (max-width:1200px){
+    #clock_div{
+        height: 17vh;
+        scale: 75%;
+    }
 }
 
 #clock_div:hover{
@@ -328,7 +375,7 @@ main{
     flex-wrap: wrap;
     margin: 3vh 0vh auto;
     left: 1.5vh;
-    bottom: 14vh;
+    bottom: 12vh;
     opacity: 0.7;
 
   }
@@ -547,6 +594,9 @@ main #to_Do_input:focus{
     footer #quotes{
         font-size: 2vh;
         opacity: 0.6;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
     }
     footer #quotes:hover{
         opacity: 1;
@@ -558,4 +608,15 @@ main #to_Do_input:focus{
         text-decoration-style: solid;
         color:white;
         opacity: none;
+    }
+
+    .main_form{
+        scale: 100%;
+        transition: scale 1s ease-in-out;
+    }
+
+    @media (max-width:1200px){
+        .main_form{
+            scale: 90%;
+        }
     }
